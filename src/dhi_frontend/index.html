@@ -3,15 +3,103 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DHI</title>
   <base href="/" />
   <link rel="icon" href="/favicon.ico" />
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+    }
+    .footer a {
+      margin: 0 10px;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
+  <!-- Header with Responsive Menus and Profile Icons -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Brand</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-user"></i> Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Body Section with 4 Divisions -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Advertisement</h4>
+        <p>Content for Advertisement</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Programs</h4>
+        <p>Content for Programs</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Announcements</h4>
+        <p>Content for Announcements</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Trends Claims</h4>
+        <p>Content for Trends Claims</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Trends Insurances</h4>
+        <p>Content for Trends Insurances</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with Various Links -->
+  <footer class="footer text-center mt-4">
+    <div class="container">
+      <p>&copy; 2024 Vondy.com</p>
+      <p>
+        <a href="mailto:support@vondy.com">Email</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://aws.amazon.com" target="_blank">AWS</a>
+        <a href="https://forum.vondy.com" target="_blank">Forum</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 </html>
