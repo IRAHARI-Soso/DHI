@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "dhi_backend": {
+      "main": "src/dhi_backend/main.mo",
+      "type": "motoko"
+    },
+    "dhi_frontend": {
+      "dependencies": [
+        "dhi_backend"
+      ],
+      "source": [
+        "src/dhi_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dhi_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
