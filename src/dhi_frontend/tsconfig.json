@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "useDefineForClassFields": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "target": "esnext", // Specifies the output target ECMAScript version.
+    "useDefineForClassFields": true, // Enables class fields to be defined in the constructor.
+    "lib": ["dom", "dom.iterable", "esnext"], // Specifies the libraries to include in the compilation.
+    "allowJs": false, // Disallows JavaScript files in the project.
+    "skipLibCheck": true, // Skips type checking of declaration files.
+    "esModuleInterop": true, // Enables compatibility between CommonJS and ES modules.
+    "allowSyntheticDefaultImports": true, // Allows default imports from modules with no default export.
+    "strict": true, // Enables all strict type-checking options.
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing in file names.
+    "module": "esnext", // Specifies the module code generation.
+    "moduleResolution": "node", // Uses Node.js module resolution.
+    "resolveJsonModule": true, // Allows importing .json files.
+    "isolatedModules": true, // Ensures each file can be transpiled without dependencies.
+    "noEmit": true, // Prevents the compiler from emitting files.
+    "jsx": "react-jsx", // Specifies JSX code generation as React.
+    "types": ["vite/client"] // Includes type definitions for Vite.
   },
-  "include": ["src"]
+  "include": ["src"] // Specifies the files to include in the project.
 }

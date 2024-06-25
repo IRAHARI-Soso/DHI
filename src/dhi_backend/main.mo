@@ -1,4 +1,5 @@
 import Debug "mo:base/Debug";
+import Array "mo:base/Array";
 
 actor DecentralizedHealthInsurance {
     type Patient = {
@@ -34,7 +35,7 @@ actor DecentralizedHealthInsurance {
     stable var claims: [Claim] = [];
 
     public func createPatient(patient: Patient): async () {
-        patients := Array.append(patients, [patient]);
+        patients := Array.append<Patient>(patients, [patient]);
     };
 
     public func readPatients(): async [Patient] {
@@ -42,7 +43,7 @@ actor DecentralizedHealthInsurance {
     };
 
     public func createDoctor(doctor: Doctor): async () {
-        doctors := Array.append(doctors, [doctor]);
+        doctors := Array.append<Doctor>(doctors, [doctor]);
     };
 
     public func readDoctors(): async [Doctor] {
@@ -50,7 +51,7 @@ actor DecentralizedHealthInsurance {
     };
 
     public func createInsurance(insurance: Insurance): async () {
-        insurances := Array.append(insurances, [insurance]);
+        insurances := Array.append<Insurance>(insurances, [insurance]);
     };
 
     public func readInsurances(): async [Insurance] {
@@ -58,7 +59,7 @@ actor DecentralizedHealthInsurance {
     };
 
     public func createClaim(claim: Claim): async () {
-        claims := Array.append(claims, [claim]);
+        claims := Array.append<Claim>(claims, [claim]);
     };
 
     public func readClaims(): async [Claim] {

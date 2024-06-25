@@ -11,14 +11,13 @@ const Insurancer = () => {
 
   const fetchInsurances = async () => {
     // Fetch insurances from the backend
-    // Example: const result = await fetchBackend('/api/insurances');
-    // setInsurances(result);
+    const result = await decentralizedHealthInsurance.readInsurances();
+    setInsurances(result);
   };
 
   const handleCreateInsurance = async () => {
     const newInsurance = { id: Date.now(), name, coverageDetails };
-    // Send newInsurance to the backend
-    // await sendToBackend('/api/createInsurance', newInsurance);
+    await decentralizedHealthInsurance.createInsurance(newInsurance);
     setInsurances([...insurances, newInsurance]);
     setName('');
     setCoverageDetails('');
