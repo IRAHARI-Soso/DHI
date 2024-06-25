@@ -12,15 +12,43 @@
   <style>
     body {
       background: linear-gradient(to right, #ece9e6, #ffffff);
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    .footer {
+    .bg-image {
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2; /* Adjust opacity as needed */
+    }
+
+    .navbar {
       background-color: #f8f9fa;
-      padding: 20px 0;
     }
 
-    .footer a {
-      margin: 0 10px;
+    .navbar-brand {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: #6c757d;
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: #007bff;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #007bff;
+    }
+
+    .dropdown-menu {
+      min-width: auto; /* Adjust dropdown width */
     }
 
     .section {
@@ -38,15 +66,41 @@
     .section p {
       color: #6c757d;
     }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      color: #6c757d;
+    }
+
+    .footer a {
+      margin: 0 10px;
+      color: #6c757d;
+    }
+
+    .footer a:hover {
+      color: #007bff;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Background Image -->
+  <div class="bg-image">
+    <img src="path/to/your/background-image.jpg" alt="Background Image" style="width: 100%; height: auto;">
+  </div>
+
   <!-- Header with Responsive Menus and Profile Icons -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">DHI</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -64,16 +118,17 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user"></i> Profile
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="#">Settings</a>
-              <a class="dropdown-item" href="#">General Login</a>
-              <a class="dropdown-item" href="#">Reset</a>
-              <a class="dropdown-item" href="#">Signup</a>
+              <a class="dropdown-item" href="settings.sjs">Settings</a>
+              <a class="dropdown-item" href="login.sjs">General Login</a>
+              <a class="dropdown-item" href="reset.sjs">Reset</a>
+              <a class="dropdown-item" href="signup.sjs">Signup</a>
               <a class="dropdown-item" href="#">Change Background</a>
               <a class="dropdown-item" href="#">Change Font</a>
               <a class="dropdown-item" href="#">Change Text Color</a>
@@ -84,9 +139,8 @@
     </nav>
   </header>
 
-  
   <!-- Body Section with 4 Divisions -->
-  <div class="container mt-4">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-3 section">
         <h4>Advertisement</h4>
@@ -105,35 +159,20 @@
         <p>Content for Trends Claims</p>
       </div>
 
-  <!-- Body Section with 4 Divisions -->
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-3 section">
-        <h4>Advertisement</h4>
-        <p>Content for Advertisement</p>
-      </div>
-      <div class="col-md-3 section">
-        <h4>Programs</h4>
-        <p>Content for Programs</p>
-      </div>
-      <div class="col-md-3 section">
-        <h4>Announcements</h4>
-        <p>Content for Announcements</p>
-      </div>
-      <div class="col-md-3 section">
-        <h4>Trends Claims</h4>
-        <p>Content for Trends Claims</p>
-      </div>
-     
       <div class="col-md-12 section">
         <h4>Decentralized Health Insurance</h4>
-        <p>Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to reduce fraud, ensure privacy, and offer real-time processing of claims. Members of DHI benefit from lower premiums, faster claims settlements, and a community-driven approach to health insurance. The use of smart contracts ensures that all terms and conditions are automatically enforced without the need for intermediaries, creating a more efficient and fair system.</p>
+        <p>Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health
+          insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to
+          reduce fraud, ensure privacy, and offer real-time processing of claims. Members of DHI benefit from lower premiums,
+          faster claims settlements, and a community-driven approach to health insurance. The use of smart contracts ensures
+          that all terms and conditions are automatically enforced without the need for intermediaries, creating a more
+          efficient and fair system.</p>
       </div>
     </div>
   </div>
 
   <!-- Footer with Various Links -->
-  <footer class="footer text-center container-fluid">
+  <footer class="footer">
     <div class="container">
       <p>&copy; 2024 &copy; Blockchain Developer IRAHARI Soso</p>
       <p>
@@ -156,7 +195,7 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
   <script>
-    // JavaScript logic for change background, font, and text color
+    // JavaScript logic for dropdown item click
     document.querySelector('.dropdown-item[href="#"]').addEventListener('click', function (e) {
       e.preventDefault();
       alert('This is an alert for settings.');
