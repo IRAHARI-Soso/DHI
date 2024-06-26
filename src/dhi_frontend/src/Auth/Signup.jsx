@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const history = useHistory();
+  const navigate = useNavigate();  // Changed from useHistory to useNavigate
 
-  const handleLogin = (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
-    // Implement login logic here, e.g., API call
-    console.log('Logging in with:', email, password);
-    // Redirect to dashboard after successful login
+    // Implement signup logic here, e.g., API call
+    console.log('Signing up with:', email, password);
+    // Redirect to dashboard after successful signup
     history.push('/dashboard');
   };
 
   return (
     <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+      <h2>Signup</h2>
+      <form onSubmit={handleSignup}>
         <label>Email:</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <br />
         <label>Password:</label>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <br />
-        <button type="submit">Login</button>
+        <button type="submit">Signup</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Signup;

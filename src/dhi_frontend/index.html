@@ -1,199 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DHI</title>
+  <meta name="viewport" content="width=device-width" />
+  <title>DHI </title>
   <base href="/" />
   <link rel="icon" href="/favicon.ico" />
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(to right, #1d1003, #100f0f);
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .bg-image {
-      position: fixed;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.001; /* Adjust opacity as needed */
-    }
-
-    .navbar {
-      background-color: #f8f9fa;
-    }
-
-    .navbar-brand {
-      font-weight: bold;
-      color: #007bff;
-    }
-
-    .navbar-nav .nav-item .nav-link {
-      color: #6c757d;
-    }
-
-    .navbar-nav .nav-item.active .nav-link {
-      color: #007bff;
-    }
-
-    .navbar-toggler-icon {
-      background-color: #ababac;
-    }
-
-    .dropdown-menu {
-      min-width: auto; /* Adjust dropdown width */
-    }
-
-    .section {
-      border: 1px solid #dee2e6;
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 5px;
-      background: linear-gradient(to right, #f8f9fa, #e0e0e0);
-    }
-
-    .section h4 {
-      color: #007bff;
-    }
-
-    .section p {
-      color: #6c757d;
-    }
-
-    .footer {
-      background-color: #f8f9fa;
-      padding: 20px 0;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      color: #6c757d;
-    }
-
-    .footer a {
-      margin: 0 10px;
-      color: #6c757d;
-    }
-
-    .footer a:hover {
-      color: #007bff;
-    }
-  </style>
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="index.scss"/>
 </head>
 
 <body>
- 
-
-  <!-- Header with Responsive Menus and Profile Icons -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#">DHI</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Features">Features</a>
-          </li>
-          
-         
-        </ul>
-        <ul class="navbar-nav ml-auto">
-         
-            <div class="nav-item-right">
-              <li class="nav-item">
-                <a class="nav-link" href="/signup">Signup</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
-              </li>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-   <!-- Background Image -->
-   <div class="bg-image">
-    <img src="./images/1.jpeg" alt="Background Image" style="width: 100%; height: auto;">
-  </div>
-
-  <!-- Body Section with 4 Divisions -->
-  <div class="container shadow rounded p-3">
-    <div class="row">
-      <div class="col-md-3 section">
-        <h4>Advertisement</h4>
-        <p>Content for Advertisement</p>
-      </div>
-      <div class="col-md-3 section">
-        <h4>Programs</h4>
-        <p>Content for Programs</p>
-      </div>
-      <div class="col-md-3 section">
-        <h4>Announcements</h4>
-        <p>Content for Announcements</p>
-      </div>
-      <div class="col-md-3 section">
-        <h4>Trends Claims</h4>
-        <p>Content for Trends Claims</p>
-      </div>
-
-      <div class="col-md-12 section">
-        <h4>Decentralized Health Insurance</h4>
-        <p>Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health
-          insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to
-          reduce fraud, ensure privacy, and offer real-time processing of claims. Members of DHI benefit from lower premiums,
-          faster claims settlements, and a community-driven approach to health insurance. The use of smart contracts ensures
-          that all terms and conditions are automatically enforced without the need for intermediaries, creating a more
-          efficient and fair system.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer with Various Links -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Blockchain Developer IRAHARI Soso</p>
-      <p>
-        <a href="mailto:support@vondy.com">Email</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
-        <a href="https://aws.amazon.com" target="_blank">AWS</a>
-        <a href="https://forum.vondy.com" target="_blank">Forum</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-  <script>
-    // JavaScript logic for dropdown item click
-    document.querySelector('.dropdown-item[href="#"]').addEventListener('click', function (e) {
-      e.preventDefault();
-      alert('This is an alert for settings.');
-    });
-
-    // Add more JavaScript logic as needed
-  </script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
-</html>
