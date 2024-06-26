@@ -21,21 +21,20 @@ actor DecentralizedHealthInsurance {
         coverageDetails: Text;
     };
 
-    type Claim = {
+    type User = {
         id: Nat;
-        patientId: Nat;
-        doctorId: Nat;
-        amount: Nat;
-        status: Text;
+        username: Text;
+        password: Text;
+        role: Text;
     };
 
     stable var patients: [Patient] = [];
     stable var doctors: [Doctor] = [];
     stable var insurances: [Insurance] = [];
-    stable var claims: [Claim] = [];
+    stable var users: [User] = [];
 
     public func createPatient(patient: Patient): async () {
-        patients := Array.append<Patient>(patients, [patient]);
+        patients := Array.push<Patient>(patients, patient);
     };
 
     public func readPatients(): async [Patient] {
@@ -43,7 +42,7 @@ actor DecentralizedHealthInsurance {
     };
 
     public func createDoctor(doctor: Doctor): async () {
-        doctors := Array.append<Doctor>(doctors, [doctor]);
+        doctors := Array.push<Doctor>(doctors, doctor);
     };
 
     public func readDoctors(): async [Doctor] {
@@ -51,18 +50,31 @@ actor DecentralizedHealthInsurance {
     };
 
     public func createInsurance(insurance: Insurance): async () {
-        insurances := Array.append<Insurance>(insurances, [insurance]);
+        insurances := Array.push<Insurance>(insurances, insurance);
     };
 
     public func readInsurances(): async [Insurance] {
         return insurances;
     };
 
-    public func createClaim(claim: Claim): async () {
-        claims := Array.append<Claim>(claims, [claim]);
+    public func createUser(user: User): async () {
+        users := Array.push<User>(users, user);
     };
 
-    public func readClaims(): async [Claim] {
-        return claims;
+    public func login(username: Text, password: Text): async ?User {
+        for (user in users.vals()) {
+            if (user.username == username and user.password == password) {
+                return ?user;
+            }
+        };
+        return null;
+    };
+
+    public func readUsers(): async [User] {
+        return users;
     };
 };
+
+// Example usage of Array
+let arr: [Nat] = Array.init<Nat>(5, func (i: Nat) : Nat { i });
+Debug.print(debug_show(arr));

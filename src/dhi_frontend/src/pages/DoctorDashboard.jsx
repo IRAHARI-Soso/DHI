@@ -36,7 +36,7 @@ const DoctorDashboard = () => {
           <div className="collapse" id="doctorsDropdown">
             <a href="#" className="list-group-item list-group-item-action">Add</a>
             <a href="#" className="list-group-item list-group-item-action">View Table</a>
-            <a href="#" className="list-group-item list-group-item-action">Edit</a>
+            <a href="#" className="list-group-item list-group-item-action">            Edit</a>
             <a href="#" className="list-group-item list-group-item-action">Delete</a>
           </div>
           <a
@@ -85,7 +85,7 @@ const DoctorDashboard = () => {
             <a href="#" className="list-group-item list-group-item-action">Add</a>
             <a href="#" className="list-group-item list-group-item-action">View Table</a>
             <a href="#" className="list-group-item list-group-item-action">Edit</a>
-            <a href="#" className="list-group-item list-group-item            -action">Delete</a>
+            <a href="#" className="list-group-item list-group-item-action">Delete</a>
           </div>
           <a
             href="#"
