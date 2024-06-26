@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,10 +7,10 @@
   <base href="/" />
   <link rel="icon" href="/favicon.ico" />
   <!-- Bootstrap CSS -->
-  <link  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to right, #ece9e6, #ffffff);
+      background: linear-gradient(to right, #1d1003, #100f0f);
       margin: 0;
       font-family: Arial, sans-serif;
     }
@@ -23,7 +22,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.2; /* Adjust opacity as needed */
+      opacity: 0.001; /* Adjust opacity as needed */
     }
 
     .navbar {
@@ -44,7 +43,7 @@
     }
 
     .navbar-toggler-icon {
-      background-color: #007bff;
+      background-color: #ababac;
     }
 
     .dropdown-menu {
@@ -90,10 +89,7 @@
 </head>
 
 <body>
-  <!-- Background Image -->
-  <div class="bg-image">
-    <img src="./images/1.jpeg" alt="Background Image" style="width: 100%; height: auto;">
-  </div>
+ 
 
   <!-- Header with Responsive Menus and Profile Icons -->
   <header>
@@ -109,29 +105,20 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="/Features">Features</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
+          
+         
         </ul>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> Profile
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-              <a class="dropdown-item" href="settings.sjs">Settings</a>
-              <a class="dropdown-item" href="./src/pages/login.jsx">General Login</a>
-              <a class="dropdown-item" href="./src/pages/Reset.jsx">Reset</a>
-              <a class="dropdown-item" href="./src/pages/Signup.jsx">Signup</a>
-              <a class="dropdown-item" href="#">Change Background</a>
-              <a class="dropdown-item" href="#">Change Font</a>
-              <a class="dropdown-item" href="#">Change Text Color</a>
+         
+            <div class="nav-item-right">
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
             </div>
           </li>
         </ul>
@@ -139,8 +126,13 @@
     </nav>
   </header>
 
+   <!-- Background Image -->
+   <div class="bg-image">
+    <img src="./images/1.jpeg" alt="Background Image" style="width: 100%; height: auto;">
+  </div>
+
   <!-- Body Section with 4 Divisions -->
-  <div class="container-fluid">
+  <div class="container shadow rounded p-3">
     <div class="row">
       <div class="col-md-3 section">
         <h4>Advertisement</h4>
@@ -204,6 +196,4 @@
     // Add more JavaScript logic as needed
   </script>
 </body>
-
 </html>
-

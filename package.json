@@ -16,6 +16,7 @@
     "src/dhi_frontend"
   ],
   "dependencies": {
+    "@dfinity/auth-client": "^1.4.0",
     "bootstrap": "^5.3.3",
     "react-scripts": "^3.0.1"
   }
