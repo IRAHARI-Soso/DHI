@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     
-    <div class="container-fluid p-3">
-      <header>
+    <div class="container p-3">
+      <header className='container p-3'>
         <p className='alert alert-primary p-3 shadow rounded contsiner-fluid text-center display-5'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
         <nav className="navbar navbar-expand-lg navbar-light">
           <a className="navbar-brand" href="#">DHI</a>
@@ -37,27 +37,27 @@ const Home = () => {
         <img src="/images/1.jpeg" alt="Background" style={{ width: '100%', height: 'auto' }} />
       </div> */}
 
-      <div className="container shadow rounded p-3">
+      <div className="container shadow rounded p-2">
         <div className="row">
-          <div className="col-md-3 section">
+          <div className="col-md-3 section p-3">
             <h4>Advertisement</h4>
-            <p className='p-3 shadow rounded alert alert-basic'>Content for Advertisement</p>
+            <p className='p-3 shadow rounded alert alert-primary'>Content for Advertisement</p>
           </div>
-          <div className="col-md-3 section">
+          <div className="col-md-3 section p-3">
             <h4>Programs</h4>
             <p className='p-3 shadow rounded alert alert-dark'>Content for Programs</p>
           </div>
-          <div className="col-md-3 section">
+          <div className="col-md-3 section p-3">
             <h4>Announcements</h4>
             <p className='p-3 shadow rounded alert alert-success'>Content for Announcements</p>
           </div>
-          <div className="col-md-3 section">
+          <div className="col-md-3 section p-3">
             <h4>Trends Claims</h4>
             <p className='p-3 shadow rounded alert alert-primary'>Content for Trends Claims</p>
           </div>
 
-          <div className="col-md-12 section">
-            <h4>Decentralized Health Insurance</h4>
+          <div className="col-md-12 section p-3">
+            <h4 className='display -4 p-3'>Decentralized Health Insurance</h4>
             <p className='p-3 shadow rounded alert alert-dark'>
               Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health
               insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to
@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </div>
 
-      <footer className="footer container p-3">
+      <footer className="footer container p-3 mt-7">
         <div>
           <p>&copy; 2024 Blockchain Developer Team 1 IPRC NGOMA</p>
           <p>
