@@ -11,7 +11,7 @@ const Home = () => {
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse container-fluid">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
                 <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
@@ -34,7 +34,7 @@ const Home = () => {
      
 
       {/* <div className="bg-image">
-        <img src="./images/1.jpeg" alt="Background" style={{ width: '100%', height: 'auto' }} />
+        <img src="/images/1.jpeg" alt="Background" style={{ width: '100%', height: 'auto' }} />
       </div> */}
 
       <div className="container shadow rounded p-3">
