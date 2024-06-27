@@ -143,11 +143,11 @@ const Login = () => {
 
   return (
     <main>
-      <img src="../../images/3.jpg" className="img-circle w-25" />
+      <img src="./3.jpg" className="img-circle w-25" />
       <h1 className='alert alert-success p-3'>Members and Claims Management (DHI)</h1>
       {isLoggedIn ? (
         <>
-          <p>Welcome back, {principal ? principal.toString() : "User"}!</p>
+          
           <button onClick={signOut}>Sign Out</button>
           <button onClick={() => setShowAddMemberForm(true)}>Add New Member</button>
           <button onClick={() => setShowAddClaimForm(true)}>Add New Claim</button>
