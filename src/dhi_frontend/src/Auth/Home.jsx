@@ -21,9 +21,9 @@ const Home = () => {
               </li>
             </ul>
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/signup">Signup</Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link className="nav-link" to="/login">Login</Link>
               </li>
@@ -41,24 +41,24 @@ const Home = () => {
         <div className="row">
           <div className="col-md-3 section">
             <h4>Advertisement</h4>
-            <p>Content for Advertisement</p>
+            <p className='p-3 shadow rounded alert alert-basic'>Content for Advertisement</p>
           </div>
           <div className="col-md-3 section">
             <h4>Programs</h4>
-            <p>Content for Programs</p>
+            <p className='p-3 shadow rounded alert alert-dark'>Content for Programs</p>
           </div>
           <div className="col-md-3 section">
             <h4>Announcements</h4>
-            <p>Content for Announcements</p>
+            <p className='p-3 shadow rounded alert alert-success'>Content for Announcements</p>
           </div>
           <div className="col-md-3 section">
             <h4>Trends Claims</h4>
-            <p>Content for Trends Claims</p>
+            <p className='p-3 shadow rounded alert alert-primary'>Content for Trends Claims</p>
           </div>
 
           <div className="col-md-12 section">
             <h4>Decentralized Health Insurance</h4>
-            <p>
+            <p className='p-3 shadow rounded alert alert-dark'>
               Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health
               insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to
               reduce fraud, ensure privacy, and offer real-time processing of claims. Members of DHI benefit from lower premiums,

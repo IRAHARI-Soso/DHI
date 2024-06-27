@@ -69,12 +69,120 @@
 // };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Array "mo:base/Array";
+
+// actor {
+//   stable var members : [Member] = [];
+//   stable var claims : [Claim] = [];
+//   stable var memberClaims : [(Text, Claim)] = [];
+
+//   public type Member = {
+//     firstName : Text;
+//     lastName : Text;
+//     address : Text;
+//     contact: Text;
+//   };
+
+//   public type Claim = {
+//     claimId : Text;
+//     claimName : Text;
+//   };
+
+//   public query func getMembers() : async [Member] {
+//     return members;
+//   };
+
+//   public query func getClaims() : async [Claim] {
+//     return claims;
+//   };
+
+//   public func addMember(firstName : Text, lastName : Text, address : Text, contact : Text) : async () {
+//     let newMember : [Member] = [{ firstName; lastName; address; contact }];
+//     members := Array.append(members, newMember);
+//   };
+
+//   public func addClaim(claimId : Text, claimName : Text) : async () {
+//     let newClaim : [Claim] = [{ claimId; claimName }];
+//     claims := Array.append(claims, newClaim);
+//   };
+
+//   public func assignClaimToMember(memberId : Text, claimId : Text) : async () {
+//     let claimOpt = Array.find<Claim>(
+//       claims,
+//       func(c : Claim) : Bool {
+//         c.claimId == claimId;
+//       },
+//     );
+
+//     switch (claimOpt) {
+//       case (?claim) {
+//         memberClaims := Array.append(memberClaims, [(memberId, claim)]);
+//       };
+//       case (null) {
+//         // Handle claim not found
+//       };
+//     };
+//   };
+
+//   public query func getMemberClaims(memberId : Text) : async [Claim] {
+//     let memberClaimsList : [Claim] = Array.map<(Text, Claim), Claim>(
+//       Array.filter<(Text, Claim)>(
+//         memberClaims,
+//         func((sId, _)) : Bool {
+//           sId == memberId;
+//         },
+//       ),
+//       func((_, claim)) : Claim {
+//         claim;
+//       },
+//     );
+//     return memberClaimsList;
+//   };
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import Array "mo:base/Array";
 
 actor {
   stable var members : [Member] = [];
   stable var claims : [Claim] = [];
-  stable var Providers : [(Text, Claim)] = [];
+  stable var memberClaims : [(Text, Claim)] = [];
 
   public type Member = {
     firstName : Text;
@@ -96,17 +204,17 @@ actor {
     return claims;
   };
 
-  public func addMemberst(firstName : Text, lastName : Text, address : Text, contact : Text) : async () {
-    let newMember : [Member] = [{ firstName; lastName; address;contact }];
-    members := Array.append(members, newMember);
+  public func addMember(firstName : Text, lastName : Text, address : Text, contact : Text) : async () {
+    let newMember : Member = { firstName; lastName; address; contact };
+    members := Array.append(members, [newMember]);
   };
 
   public func addClaim(claimId : Text, claimName : Text) : async () {
-    let newClaim : [Claim] = [{ claimId; claimName }];
-    claims := Array.append(claims, newClaim);
+    let newClaim : Claim = { claimId; claimName };
+    claims := Array.append(claims, [newClaim]);
   };
 
-  public func assignClaimToMembers(memberId : Text, claimId : Text) : async () {
+  public func assignClaimToMember(memberId : Text, claimId : Text) : async () {
     let claimOpt = Array.find<Claim>(
       claims,
       func(c : Claim) : Bool {
@@ -119,12 +227,12 @@ actor {
         memberClaims := Array.append(memberClaims, [(memberId, claim)]);
       };
       case (null) {
-        // Handle claims not found
+        // Handle claim not found
       };
     };
   };
 
-  public query func getmemberClaims(memberId : Text) : async [Claim] {
+  public query func getMemberClaims(memberId : Text) : async [Claim] {
     let memberClaimsList : [Claim] = Array.map<(Text, Claim), Claim>(
       Array.filter<(Text, Claim)>(
         memberClaims,
@@ -139,3 +247,33 @@ actor {
     return memberClaimsList;
   };
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
