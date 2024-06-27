@@ -142,17 +142,37 @@ const Login = () => {
   };
 
   return (
-    <main>
+   
+    <main className='container-fluid p-3'>
      
-      <h1 className='alert alert-success p-3'>Members and Claims Management (DHI)</h1>
+      <h1 className='alert alert-success p-3'>  Members and Claims Management (DHI)</h1>
       {isLoggedIn ? (
         <>
           
-          <button onClick={signOut}>Sign Out</button>
+          {/* <button onClick={signOut}>Sign Out</button>
           <button onClick={() => setShowAddMemberForm(true)}>Add New Member</button>
           <button onClick={() => setShowAddClaimForm(true)}>Add New Claim</button>
           <button onClick={fetchMembers}>Fetch Members</button>
-          <button onClick={fetchClaims}>Fetch Claims</button>
+          <button onClick={fetchClaims}>Fetch Claims</button> */}
+          <div className="button-group">
+      <button className="btn btn-danger" onClick={signOut}>
+        <i className="bi bi-box-arrow-right"></i> Sign Out
+      </button>
+      <button className="btn btn-primary" onClick={() => setShowAddMemberForm(true)}>
+        <i className="bi bi-person-plus"></i> Add New Member
+      </button>
+      <button className="btn btn-primary" onClick={() => setShowAddClaimForm(true)}>
+        <i className="bi bi-file-earmark-plus"></i> Add New Claim
+      </button>
+      <button className="btn btn-info" onClick={fetchMembers}>
+        <i className="bi bi-people"></i> Fetch Members
+      </button>
+      <button className="btn btn-info" onClick={fetchClaims}>
+        <i className="bi bi-file-earmark-text"></i> Fetch Claims
+      </button>
+    </div>
+
+
           <h2 className='alert alert-primary p-2'>Members Available List</h2>
           <ul>
             {members.map((member, index) => (
@@ -163,36 +183,40 @@ const Login = () => {
           </ul>
           {showAddMemberForm && (
             <form onSubmit={handleAddMember}>
-              <label>
+              <label className='p-3 text-dark'>
                 First Name:
                 <input
                   type="text"
+                  className='form control'
                   value={newMember.firstName}
                   onChange={(e) => setNewMember({ ...newMember, firstName: e.target.value })}
                   required
                 />
               </label>
-              <label>
+              <label className='p-3 text-dark'>
                 Last Name:
                 <input
+                className='form control'
                   type="text"
                   value={newMember.lastName}
                   onChange={(e) => setNewMember({ ...newMember, lastName: e.target.value })}
                   required
                 />
               </label>
-              <label>
+              <label className='p-3 text-dark'>
                 Address:
                 <input
+                className='form control'
                   type="text"
                   value={newMember.address}
                   onChange={(e) => setNewMember({ ...newMember, address: e.target.value })}
                   required
                 />
               </label>
-              <label>
+              <label className='p-3 text-dark'>
                 Contact:
                 <input
+                className='form control'
                   type="text"
                   value={newMember.contact}
                   onChange={(e) => setNewMember({ ...newMember, contact: e.target.value })}
@@ -202,7 +226,7 @@ const Login = () => {
               <button type="submit" className='btn btn-primary'>Save Change</button>
             </form>
           )}
-          <h2 className='alert alert-primary p-2'>Claims Available List</h2>
+          <h2 className='alert alert-primary p-3'>Claims Available List</h2>
           <ul>
             {claims.map((claim, index) => (
               <li key={index}>
@@ -212,19 +236,21 @@ const Login = () => {
           </ul>
           {showAddClaimForm && (
             <form onSubmit={handleAddClaim}>
-              <label>
+              <label className='p-3 text-dark'>
                 Claim ID:
                 <input
                   type="text"
+                  className='form control'
                   value={newClaim.claimId}
                   onChange={(e) => setNewClaim({ ...newClaim, claimId: e.target.value })}
                   required
                 />
               </label>
-              <label>
+              <label className='p-3 text-dark'>
                 Claim Name:
                 <input
                   type="text"
+                  className='form control'
                   value={newClaim.claimName}
                   onChange={(e) => setNewClaim({ ...newClaim, claimName: e.target.value })}
                   required
@@ -234,18 +260,18 @@ const Login = () => {
             </form>
           )}
           <h2 className='alert alert-primary p-2'>Assign Claims to Members</h2>
-          <label>
+          <label className='p-3 text-dark'>
             Select Member:
-            <select value={selectedMemberId} onChange={(e) => setSelectedMemberId(e.target.value)}>
+            <select className='form control' value={selectedMemberId} onChange={(e) => setSelectedMemberId(e.target.value)}>
               <option value="">Select a Member</option>
               {members.map((member, index) => (
                 <option key={index} value={member.id}>{member.firstName} {member.lastName}</option>
               ))}
             </select>
           </label>
-          <label>
+          <label className='p-3 text-dark'>
             Select Claim:
-            <select value={selectedClaimId} onChange={(e) => setSelectedClaimId(e.target.value)}>
+            <select className='form control' value={selectedClaimId} onChange={(e) => setSelectedClaimId(e.target.value)}>
               <option value="">Select a Claim</option>
               {claims.map((claim, index) => (
                 <option key={index} value={claim.claimId}>{claim.claimName}</option>
@@ -270,7 +296,9 @@ const Login = () => {
       ) : (
         <button onClick={signIn} className='btn btn-primary'>Sign In</button>
       )}
+      
     </main>
+    
   );
 };
 
