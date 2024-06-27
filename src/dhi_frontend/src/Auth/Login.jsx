@@ -143,7 +143,7 @@ const Login = () => {
 
   return (
     <main>
-      <img src="./3.jpg" className="img-circle w-25" />
+     
       <h1 className='alert alert-success p-3'>Members and Claims Management (DHI)</h1>
       {isLoggedIn ? (
         <>
