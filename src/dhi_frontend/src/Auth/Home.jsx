@@ -75,7 +75,7 @@ const Home = () => {
 
       <footer className="footer container p-3 m-2">
         <div>
-          <p>&copy; 2024 Blockchain Developer Team 1 IPRC NGOMA</p>
+          <p>&copy; DHI   2024   &regist; ICP RWANDA</p>
           <p>
             <a href="mailto:support@vondy.com">Email</a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>

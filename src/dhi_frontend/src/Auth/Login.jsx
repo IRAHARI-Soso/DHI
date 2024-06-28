@@ -169,7 +169,7 @@ const Login = () => {
         <i className="bi bi-file-earmark-text"></i> Fetch Claims
       </button>
       <button className="btn btn-danger nav-link" onClick={signOut}>
-        <i className="bi bi-box-arrow-right"></i> Sign Out
+        <i className="bi bi-box-arrow-right"></i> Logout
       </button>
     </div>
 
