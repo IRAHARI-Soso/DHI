@@ -154,21 +154,22 @@ const Login = () => {
           <button onClick={() => setShowAddClaimForm(true)}>Add New Claim</button>
           <button onClick={fetchMembers}>Fetch Members</button>
           <button onClick={fetchClaims}>Fetch Claims</button> */}
-          <div className="button-group">
-      <button className="btn btn-danger" onClick={signOut}>
-        <i className="bi bi-box-arrow-right"></i> Sign Out
+          <div className="button-group m-3 p-2 navbar  container-fluid">
+      
+      <button className="btn btn-primary nav-link" onClick={() => setShowAddMemberForm(true)}>
+        <i className="bi bi-person-plus"></i> New Member
       </button>
-      <button className="btn btn-primary" onClick={() => setShowAddMemberForm(true)}>
-        <i className="bi bi-person-plus"></i> Add New Member
+      <button className="btn btn-primary nav-link" onClick={() => setShowAddClaimForm(true)}>
+        <i className="bi bi-file-earmark-plus"></i> New Claim
       </button>
-      <button className="btn btn-primary" onClick={() => setShowAddClaimForm(true)}>
-        <i className="bi bi-file-earmark-plus"></i> Add New Claim
-      </button>
-      <button className="btn btn-info" onClick={fetchMembers}>
+      <button className="btn btn-info nav-link" onClick={fetchMembers}>
         <i className="bi bi-people"></i> Fetch Members
       </button>
-      <button className="btn btn-info" onClick={fetchClaims}>
+      <button className="btn btn-info nav-link" onClick={fetchClaims}>
         <i className="bi bi-file-earmark-text"></i> Fetch Claims
+      </button>
+      <button className="btn btn-danger nav-link" onClick={signOut}>
+        <i className="bi bi-box-arrow-right"></i> Sign Out
       </button>
     </div>
 

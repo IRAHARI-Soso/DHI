@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     
-    <div class="container p-3">
-      <header className='container p-3'>
-        <p className='alert alert-primary p-3 shadow rounded contsiner-fluid text-center display-5'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
-        <nav className="navbar navbar-expand-lg navbar-light">
+    <div class="container p-3 m-3">
+      <header className='container-fluid p-3 text-dark'>
+        <p className='alert alert-primary p-3 contsiner-fluid text-center display-4 m-3'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
+        <nav className="navbar navbar-expand-sm navbar-light text-primary">
           <a className="navbar-brand" href="#">DHI</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@ const Home = () => {
       {/* <div className="bg-image">
         <img src="/images/1.jpeg" alt="Background" style={{ width: '100%', height: 'auto' }} />
       </div> */}
-
+<div className="container display-6">
       <div className="container shadow rounded p-2">
         <div className="row">
           <div className="col-md-3 section p-3">
@@ -56,9 +56,9 @@ const Home = () => {
             <p className='p-3 shadow rounded alert alert-primary'>Content for Trends Claims</p>
           </div>
 
-          <div className="col-md-12 section p-3">
-            <h4 className='display -4 p-3'>Decentralized Health Insurance</h4>
-            <p className='p-3 shadow rounded alert alert-dark'>
+          <div className="col-md-12 section p-3 mt-3">
+            <h4 className='display-3 p-3'>Decentralized Health Insurance</h4>
+            <p className='p-3  alert alert-dark'>
               Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health
               insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to
               reduce fraud, ensure privacy, and offer real-time processing of claims. Members of DHI benefit from lower premiums,
@@ -69,8 +69,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+      </div>
 
-      <footer className="footer container p-3 mt-7">
+
+
+      <footer className="footer container p-3 m-2">
         <div>
           <p>&copy; 2024 Blockchain Developer Team 1 IPRC NGOMA</p>
           <p>
@@ -83,8 +86,9 @@ const Home = () => {
             <a href="https://forum.vondy.com" target="_blank" rel="noopener noreferrer">Forum</a>
           </p>
         </div>
-      </footer>
-    </div>
+   
+   </footer>
+   </div>
   );
 };
 
