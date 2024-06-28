@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Home = () => {
   return (
-    
+    <div>
     <div class="container p-3 m-3">
       <header className='container-fluid p-3 text-dark'>
          <nav className="navbar navbar-expand-sm navbar-light text-primary">
@@ -88,7 +88,7 @@ const Home = () => {
         </div>
    
    </footer>
-   </div>
+   </div></div>
   );
 };
 
