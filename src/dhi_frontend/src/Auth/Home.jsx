@@ -5,7 +5,7 @@ const Home = () => {
     
     <div class="container p-3 m-3">
       <header className='container-fluid p-3 text-dark'>
-        <p className='alert alert-primary p-3 contsiner-fluid text-center display-4 m-3'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
+        <p className='alert alert-primary p-3 container-fluid text-center display-5 mt-3'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
         <nav className="navbar navbar-expand-sm navbar-light text-primary">
           <a className="navbar-brand" href="#">DHI</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
