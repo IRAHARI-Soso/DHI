@@ -29,6 +29,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Auth/Login';
 import Home from './Auth/Home';
+import Features from './Auth/Features';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/features" element={<Features />} />
       </Routes>
     </Router>
   );

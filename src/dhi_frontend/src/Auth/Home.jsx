@@ -19,11 +19,8 @@ const Home = () => {
             </button>
             <div className="collapse navbar-collapse container-fluid" id="navbarNav">
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                  <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Features">Features</a>
+                  <a className="nav-link" href="/features">Features</a>
                 </li>
               </ul>
               <ul className="navbar-nav ml-auto">
