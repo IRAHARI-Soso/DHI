@@ -5,8 +5,7 @@ const Home = () => {
     
     <div class="container p-3 m-3">
       <header className='container-fluid p-3 text-dark'>
-        <p className='alert alert-primary p-3 container-fluid text-center display-5 mt-3'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
-        <nav className="navbar navbar-expand-sm navbar-light text-primary">
+         <nav className="navbar navbar-expand-sm navbar-light text-primary">
           <a className="navbar-brand" href="#">DHI</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -32,7 +31,8 @@ const Home = () => {
         </nav>
       </header>
      
-
+      <p className='alert alert-primary p-3 container-fluid text-center display-5 mt-3'>Welcome back again</p>
+       
       {/* <div className="bg-image">
         <img src="/images/1.jpeg" alt="Background" style={{ width: '100%', height: 'auto' }} />
       </div> */}
@@ -57,7 +57,7 @@ const Home = () => {
           </div>
 
           <div className="col-md-12 section p-3 mt-3">
-            <h4 className='display-3 p-3'>Decentralized Health Insurance</h4>
+            <p className='display-7 p-3 container'>DECENTRALIZED HEALTH INSURANCE SYSTEM</p>
             <p className='p-3  alert alert-dark'>
               Decentralized Health Insurance (DHI) leverages blockchain technology to provide transparent and secure health
               insurance solutions. By decentralizing the control and distribution of health insurance claims, DHI aims to
